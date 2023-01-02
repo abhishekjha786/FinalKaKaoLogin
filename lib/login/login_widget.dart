@@ -7,9 +7,6 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-import 'kakao_login.dart';
-import 'main_view_model.dart';
-
 class LoginWidget extends StatefulWidget {
   const LoginWidget({Key? key}) : super(key: key);
 
@@ -24,30 +21,6 @@ class _LoginWidgetState extends State<LoginWidget> {
   bool? loginsuccess;
   final _unfocusNode = FocusNode();
   final scaffoldKey = GlobalKey<ScaffoldState>();
-  final viewModel = MainViewModel(KakaoLogin());
-
-  fn(BuildContext context) async {
-    //bool x = await viewModel.isLogined;
-    context.pushNamedAuth('HomePage', mounted);
-    // if (x) {
-    //   context.pushNamed('HomePage');
-    // } else {
-    //   await showDialog(
-    //     context: context,
-    //     builder: (alertDialogContext) {
-    //       return AlertDialog(
-    //         title: Text('Access Denied!'),
-    //         actions: [
-    //           TextButton(
-    //             onPressed: () => Navigator.pop(alertDialogContext),
-    //             child: Text('Ok'),
-    //           ),
-    //         ],
-    //       );
-    //     },
-    //   );
-    // }
-  }
 
   @override
   void initState() {
@@ -82,7 +55,7 @@ class _LoginWidgetState extends State<LoginWidget> {
               mainAxisSize: MainAxisSize.max,
               children: [
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(15, 30, 15, 0),
+                  padding: EdgeInsetsDirectional.fromSTEB(15, 40, 15, 0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -542,28 +515,26 @@ class _LoginWidgetState extends State<LoginWidget> {
                   padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
                   child: InkWell(
                     onTap: () async {
-                      await viewModel.login();
-                      await fn(context);
-
-                      // if (viewModel.isLogined) {
-                      //   context.pushNamed('HomePage');
-                      // } else {
-                      //   // await showDialog(
-                      //   //   context: context,
-                      //   //   builder: (alertDialogContext) {
-                      //   //     return AlertDialog(
-                      //   //       title: Text('Access Denied!'),
-                      //   //       actions: [
-                      //   //         TextButton(
-                      //   //           onPressed: () =>
-                      //   //               Navigator.pop(alertDialogContext),
-                      //   //           child: Text('Ok'),
-                      //   //         ),
-                      //   //       ],
-                      //   //     );
-                      //   //   },
-                      //   // );
-                      // }
+                      loginsuccess = await actions.kakaologin();
+                      if (loginsuccess == true) {
+                        context.pushNamed('HomePage');
+                      } else {
+                        await showDialog(
+                          context: context,
+                          builder: (alertDialogContext) {
+                            return AlertDialog(
+                              title: Text('Access Denied!'),
+                              actions: [
+                                TextButton(
+                                  onPressed: () =>
+                                      Navigator.pop(alertDialogContext),
+                                  child: Text('Ok'),
+                                ),
+                              ],
+                            );
+                          },
+                        );
+                      }
 
                       setState(() {});
                     },

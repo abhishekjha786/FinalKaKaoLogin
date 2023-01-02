@@ -47,7 +47,7 @@ class _UserPostAddWidgetState extends State<UserPostAddWidget> {
               mainAxisSize: MainAxisSize.max,
               children: [
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -704,16 +704,16 @@ class _UserPostAddWidgetState extends State<UserPostAddWidget> {
                           ),
                           child: TextFormField(
                             controller: textController,
-                            autofocus: true,
                             obscureText: false,
                             decoration: InputDecoration(
-                              hintText: '사람이나 지역을 특정할 수 있는 내용은 제외하고작성바랍니다.',
+                              hintText: '사람이나 지역을 특정할 수 있는 내용은 제외하고\n작성바랍니다.',
                               hintStyle: FlutterFlowTheme.of(context)
                                   .bodyText2
                                   .override(
                                     fontFamily: 'NotoSansKR',
                                     color: Color(0xFFB0B7BE),
-                                    fontWeight: FontWeight.w500,
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.normal,
                                     useGoogleFonts: false,
                                   ),
                               enabledBorder: UnderlineInputBorder(

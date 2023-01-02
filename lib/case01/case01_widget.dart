@@ -108,97 +108,91 @@ class _Case01WidgetState extends State<Case01Widget> {
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(0, 0, 8, 0),
-                            child: Container(
-                              width: 155,
-                              height: 65,
-                              decoration: BoxDecoration(
-                                color: FlutterFlowTheme.of(context)
-                                    .secondaryBackground,
-                                borderRadius: BorderRadius.circular(15),
-                                border: Border.all(
-                                  color:
-                                      FlutterFlowTheme.of(context).primaryColor,
-                                ),
+                          Container(
+                            width: 155,
+                            height: 65,
+                            decoration: BoxDecoration(
+                              color: FlutterFlowTheme.of(context)
+                                  .secondaryBackground,
+                              borderRadius: BorderRadius.circular(15),
+                              border: Border.all(
+                                color:
+                                    FlutterFlowTheme.of(context).primaryColor,
                               ),
-                              child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    15, 10, 15, 10),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          0, 0, 10, 0),
-                                      child: FaIcon(
-                                        FontAwesomeIcons.exclamationCircle,
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryColor,
-                                        size: 28,
-                                      ),
+                            ),
+                            child: Padding(
+                              padding:
+                                  EdgeInsetsDirectional.fromSTEB(12, 10, 0, 10),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.max,
+                                children: [
+                                  Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        0, 0, 10, 0),
+                                    child: FaIcon(
+                                      FontAwesomeIcons.exclamationCircle,
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryColor,
+                                      size: 28,
                                     ),
-                                    Text(
-                                      '상담 팁',
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyText1
-                                          .override(
-                                            fontFamily: 'NotoSansKR',
-                                            color: FlutterFlowTheme.of(context)
-                                                .primaryColor,
-                                            fontSize: 20,
-                                            useGoogleFonts: false,
-                                          ),
-                                    ),
-                                  ],
-                                ),
+                                  ),
+                                  Text(
+                                    '상담 팁',
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyText1
+                                        .override(
+                                          fontFamily: 'NotoSansKR',
+                                          color: FlutterFlowTheme.of(context)
+                                              .primaryColor,
+                                          fontSize: 20,
+                                          useGoogleFonts: false,
+                                        ),
+                                  ),
+                                ],
                               ),
                             ),
                           ),
-                          Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(0, 0, 8, 0),
-                            child: Container(
-                              width: 155,
-                              height: 65,
-                              decoration: BoxDecoration(
-                                color: FlutterFlowTheme.of(context)
-                                    .secondaryBackground,
-                                borderRadius: BorderRadius.circular(15),
-                                border: Border.all(
-                                  color:
-                                      FlutterFlowTheme.of(context).primaryColor,
-                                ),
+                          Container(
+                            width: 155,
+                            height: 65,
+                            decoration: BoxDecoration(
+                              color: FlutterFlowTheme.of(context)
+                                  .secondaryBackground,
+                              borderRadius: BorderRadius.circular(15),
+                              border: Border.all(
+                                color:
+                                    FlutterFlowTheme.of(context).primaryColor,
                               ),
-                              child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    15, 10, 15, 10),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          0, 0, 10, 0),
-                                      child: FaIcon(
-                                        FontAwesomeIcons.search,
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryColor,
-                                        size: 28,
-                                      ),
+                            ),
+                            child: Padding(
+                              padding:
+                                  EdgeInsetsDirectional.fromSTEB(12, 10, 0, 10),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.max,
+                                children: [
+                                  Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        0, 0, 10, 0),
+                                    child: FaIcon(
+                                      FontAwesomeIcons.search,
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryColor,
+                                      size: 28,
                                     ),
-                                    Text(
-                                      '탐정 찾기',
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyText1
-                                          .override(
-                                            fontFamily: 'NotoSansKR',
-                                            color: FlutterFlowTheme.of(context)
-                                                .primaryColor,
-                                            fontSize: 20,
-                                            useGoogleFonts: false,
-                                          ),
-                                    ),
-                                  ],
-                                ),
+                                  ),
+                                  Text(
+                                    '탐정 찾기',
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyText1
+                                        .override(
+                                          fontFamily: 'NotoSansKR',
+                                          color: FlutterFlowTheme.of(context)
+                                              .primaryColor,
+                                          fontSize: 20,
+                                          useGoogleFonts: false,
+                                        ),
+                                  ),
+                                ],
                               ),
                             ),
                           ),
@@ -574,8 +568,7 @@ class _Case01WidgetState extends State<Case01Widget> {
                           borderRadius: BorderRadius.circular(15),
                         ),
                         child: Padding(
-                          padding:
-                              EdgeInsetsDirectional.fromSTEB(20, 10, 20, 10),
+                          padding: EdgeInsetsDirectional.fromSTEB(20, 6, 20, 0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -591,7 +584,7 @@ class _Case01WidgetState extends State<Case01Widget> {
                                   ),
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
-                                        0, 8, 0, 0),
+                                        0, 4, 0, 0),
                                     child: Text(
                                       '회원가입',
                                       style: FlutterFlowTheme.of(context)
@@ -624,7 +617,7 @@ class _Case01WidgetState extends State<Case01Widget> {
                                   ),
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
-                                        0, 8, 0, 0),
+                                        0, 4, 0, 0),
                                     child: Text(
                                       '로그인',
                                       style: FlutterFlowTheme.of(context)
@@ -661,7 +654,7 @@ class _Case01WidgetState extends State<Case01Widget> {
                                   ),
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
-                                        0, 8, 0, 0),
+                                        0, 4, 0, 0),
                                     child: Text(
                                       '쿠폰함',
                                       style: FlutterFlowTheme.of(context)
@@ -738,7 +731,7 @@ class _Case01WidgetState extends State<Case01Widget> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(15, 30, 15, 0),
+                    padding: EdgeInsetsDirectional.fromSTEB(15, 40, 15, 0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -795,7 +788,6 @@ class _Case01WidgetState extends State<Case01Widget> {
                             Expanded(
                               child: TextFormField(
                                 controller: textController,
-                                autofocus: true,
                                 obscureText: false,
                                 decoration: InputDecoration(
                                   hintText: '키워드 검색',

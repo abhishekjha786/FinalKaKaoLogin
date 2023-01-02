@@ -5,14 +5,15 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-class Case01DetailWidget extends StatefulWidget {
-  const Case01DetailWidget({Key? key}) : super(key: key);
+class DetpostListDetailWidget extends StatefulWidget {
+  const DetpostListDetailWidget({Key? key}) : super(key: key);
 
   @override
-  _Case01DetailWidgetState createState() => _Case01DetailWidgetState();
+  _DetpostListDetailWidgetState createState() =>
+      _DetpostListDetailWidgetState();
 }
 
-class _Case01DetailWidgetState extends State<Case01DetailWidget> {
+class _DetpostListDetailWidgetState extends State<DetpostListDetailWidget> {
   final _unfocusNode = FocusNode();
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -773,140 +774,146 @@ class _Case01DetailWidgetState extends State<Case01DetailWidget> {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
-                      child: Container(
-                        width: double.infinity,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(30),
-                        ),
-                        child: Padding(
-                          padding:
-                              EdgeInsetsDirectional.fromSTEB(15, 20, 15, 0),
-                          child: Column(
-                            mainAxisSize: MainAxisSize.max,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Padding(
-                                padding:
-                                    EdgeInsetsDirectional.fromSTEB(0, 0, 0, 5),
-                                child: Text(
-                                  '상담분야',
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 15, 0, 15),
+                      child: Text(
+                        '상담 답변 내역',
+                        style: FlutterFlowTheme.of(context).bodyText1.override(
+                              fontFamily: 'NotoSansKR',
+                              fontSize: 18,
+                              fontWeight: FontWeight.w500,
+                              useGoogleFonts: false,
+                            ),
+                      ),
+                    ),
+                    Container(
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(15, 20, 15, 0),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.max,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Padding(
+                              padding:
+                                  EdgeInsetsDirectional.fromSTEB(0, 0, 0, 5),
+                              child: Text(
+                                '상담분야',
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyText1
+                                    .override(
+                                      fontFamily: 'NotoSansKR',
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryColor,
+                                      useGoogleFonts: false,
+                                    ),
+                              ),
+                            ),
+                            Row(
+                              mainAxisSize: MainAxisSize.max,
+                              children: [
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      0, 0, 8, 0),
+                                  child: FaIcon(
+                                    FontAwesomeIcons.quoteLeft,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryColor,
+                                    size: 34,
+                                  ),
+                                ),
+                                Text(
+                                  '학교폭력 해결 어떻게?',
+                                  maxLines: 1,
                                   style: FlutterFlowTheme.of(context)
                                       .bodyText1
                                       .override(
                                         fontFamily: 'NotoSansKR',
                                         color: FlutterFlowTheme.of(context)
-                                            .primaryColor,
+                                            .secondaryColor,
+                                        fontSize: 18,
                                         useGoogleFonts: false,
                                       ),
                                 ),
+                              ],
+                            ),
+                            Padding(
+                              padding:
+                                  EdgeInsetsDirectional.fromSTEB(0, 5, 0, 10),
+                              child: Container(
+                                width: double.infinity,
+                                height: 1,
+                                decoration: BoxDecoration(
+                                  color: Color(0xFFA4ABB5),
+                                ),
                               ),
-                              Row(
+                            ),
+                            Padding(
+                              padding:
+                                  EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
+                              child: Text(
+                                '상담 내용\n상담 내용\n상담 내용\n상담 내용\n상담 내용',
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyText1
+                                    .override(
+                                      fontFamily: 'NotoSansKR',
+                                      color: FlutterFlowTheme.of(context)
+                                          .secondaryColor,
+                                      fontWeight: FontWeight.w500,
+                                      useGoogleFonts: false,
+                                    ),
+                              ),
+                            ),
+                            Padding(
+                              padding:
+                                  EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
+                              child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0, 0, 8, 0),
-                                    child: FaIcon(
-                                      FontAwesomeIcons.quoteLeft,
-                                      color: FlutterFlowTheme.of(context)
-                                          .primaryColor,
-                                      size: 34,
-                                    ),
-                                  ),
                                   Text(
-                                    '학교폭력 해결 어떻게?',
-                                    maxLines: 1,
+                                    '2022.12.12',
                                     style: FlutterFlowTheme.of(context)
                                         .bodyText1
                                         .override(
                                           fontFamily: 'NotoSansKR',
-                                          fontSize: 18,
+                                          color: Color(0xFFA4ABB5),
+                                          fontSize: 12,
                                           useGoogleFonts: false,
                                         ),
                                   ),
                                 ],
                               ),
-                              Padding(
-                                padding:
-                                    EdgeInsetsDirectional.fromSTEB(0, 5, 0, 10),
-                                child: Container(
-                                  width: double.infinity,
-                                  height: 1,
-                                  decoration: BoxDecoration(
-                                    color: Color(0xFFA4ABB5),
-                                  ),
-                                ),
-                              ),
-                              Padding(
-                                padding:
-                                    EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
-                                child: Text(
-                                  '상담 내용\n상담 내용\n상담 내용\n상담 내용\n상담 내용',
-                                  style: FlutterFlowTheme.of(context).bodyText1,
-                                ),
-                              ),
-                              Padding(
-                                padding:
-                                    EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          0, 0, 3, 0),
-                                      child: Text(
-                                        '작성자',
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyText1
-                                            .override(
-                                              fontFamily: 'NotoSansKR',
-                                              color: Color(0xFFA4ABB5),
-                                              fontSize: 12,
-                                              useGoogleFonts: false,
-                                            ),
-                                      ),
-                                    ),
-                                    Text(
-                                      '김정현',
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyText1
-                                          .override(
-                                            fontFamily: 'NotoSansKR',
-                                            color: Color(0xFFA4ABB5),
-                                            fontSize: 12,
-                                            useGoogleFonts: false,
-                                          ),
-                                    ),
-                                    Text(
-                                      'ㅣ',
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyText1
-                                          .override(
-                                            fontFamily: 'NotoSansKR',
-                                            color: Color(0xFFA4ABB5),
-                                            fontSize: 12,
-                                            useGoogleFonts: false,
-                                          ),
-                                    ),
-                                    Text(
-                                      '2022.12.12',
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyText1
-                                          .override(
-                                            fontFamily: 'NotoSansKR',
-                                            color: Color(0xFFA4ABB5),
-                                            fontSize: 12,
-                                            useGoogleFonts: false,
-                                          ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
+                            ),
+                          ],
                         ),
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 5),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          Align(
+                            alignment: AlignmentDirectional(-1, 0),
+                            child: Container(
+                              width: 25,
+                              height: 25,
+                              decoration: BoxDecoration(
+                                color: Color(0xFFBDC5D2),
+                                borderRadius: BorderRadius.circular(100),
+                              ),
+                              child: Icon(
+                                Icons.menu_rounded,
+                                color: Colors.white,
+                                size: 14,
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                     Padding(
@@ -942,21 +949,10 @@ class _Case01DetailWidgetState extends State<Case01DetailWidget> {
                               size: 24,
                             ),
                           ),
-                          Text(
-                            '5',
-                            style: FlutterFlowTheme.of(context)
-                                .bodyText1
-                                .override(
-                                  fontFamily: 'NotoSansKR',
-                                  color:
-                                      FlutterFlowTheme.of(context).primaryColor,
-                                  useGoogleFonts: false,
-                                ),
-                          ),
                           Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(0, 0, 3, 0),
                             child: Text(
-                              '명의',
+                              '나의',
                               style: FlutterFlowTheme.of(context)
                                   .bodyText1
                                   .override(
@@ -968,8 +964,14 @@ class _Case01DetailWidgetState extends State<Case01DetailWidget> {
                             ),
                           ),
                           Text(
-                            '탐정이 답변했습니다.',
-                            style: FlutterFlowTheme.of(context).bodyText1,
+                            '답변',
+                            style:
+                                FlutterFlowTheme.of(context).bodyText1.override(
+                                      fontFamily: 'NotoSansKR',
+                                      color: FlutterFlowTheme.of(context)
+                                          .secondaryColor,
+                                      useGoogleFonts: false,
+                                    ),
                           ),
                         ],
                       ),
@@ -1147,12 +1149,20 @@ class _Case01DetailWidgetState extends State<Case01DetailWidget> {
                               child: Text(
                                 '텍스트',
                                 maxLines: 7,
-                                style: FlutterFlowTheme.of(context).bodyText1,
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyText1
+                                    .override(
+                                      fontFamily: 'NotoSansKR',
+                                      color: FlutterFlowTheme.of(context)
+                                          .secondaryColor,
+                                      fontWeight: FontWeight.w500,
+                                      useGoogleFonts: false,
+                                    ),
                               ),
                             ),
                             Padding(
                               padding:
-                                  EdgeInsetsDirectional.fromSTEB(10, 0, 15, 20),
+                                  EdgeInsetsDirectional.fromSTEB(10, 0, 15, 10),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.end,
@@ -1163,8 +1173,291 @@ class _Case01DetailWidgetState extends State<Case01DetailWidget> {
                                         .bodyText1
                                         .override(
                                           fontFamily: 'NotoSansKR',
-                                          color: FlutterFlowTheme.of(context)
-                                              .secondaryText,
+                                          color: Color(0xFFA4ABB5),
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.w500,
+                                          useGoogleFonts: false,
+                                        ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 15, 0, 15),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(0, 0, 5, 0),
+                            child: Icon(
+                              Icons.group,
+                              color: FlutterFlowTheme.of(context).primaryColor,
+                              size: 24,
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(0, 0, 3, 0),
+                            child: Text(
+                              '다른 탐정들의',
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyText1
+                                  .override(
+                                    fontFamily: 'NotoSansKR',
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryColor,
+                                    useGoogleFonts: false,
+                                  ),
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(0, 0, 3, 0),
+                            child: Text(
+                              '답변',
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyText1
+                                  .override(
+                                    fontFamily: 'NotoSansKR',
+                                    color: FlutterFlowTheme.of(context)
+                                        .secondaryColor,
+                                    useGoogleFonts: false,
+                                  ),
+                            ),
+                          ),
+                          Text(
+                            '(',
+                            style:
+                                FlutterFlowTheme.of(context).bodyText1.override(
+                                      fontFamily: 'NotoSansKR',
+                                      color: FlutterFlowTheme.of(context)
+                                          .secondaryColor,
+                                      useGoogleFonts: false,
+                                    ),
+                          ),
+                          Text(
+                            '3',
+                            style:
+                                FlutterFlowTheme.of(context).bodyText1.override(
+                                      fontFamily: 'NotoSansKR',
+                                      color: FlutterFlowTheme.of(context)
+                                          .secondaryColor,
+                                      useGoogleFonts: false,
+                                    ),
+                          ),
+                          Text(
+                            ')',
+                            style:
+                                FlutterFlowTheme.of(context).bodyText1.override(
+                                      fontFamily: 'NotoSansKR',
+                                      color: FlutterFlowTheme.of(context)
+                                          .secondaryColor,
+                                      useGoogleFonts: false,
+                                    ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
+                      child: Container(
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                          color:
+                              FlutterFlowTheme.of(context).secondaryBackground,
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.max,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Container(
+                              width: double.infinity,
+                              height: 70,
+                              decoration: BoxDecoration(
+                                color:
+                                    FlutterFlowTheme.of(context).secondaryColor,
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.max,
+                                children: [
+                                  Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        0, 0, 8, 0),
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(10),
+                                      child: Image.network(
+                                        'https://picsum.photos/seed/643/600',
+                                        width: 80,
+                                        height: double.infinity,
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
+                                  ),
+                                  Column(
+                                    mainAxisSize: MainAxisSize.max,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            0, 0, 0, 5),
+                                        child: Row(
+                                          mainAxisSize: MainAxisSize.max,
+                                          children: [
+                                            Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(0, 0, 3, 0),
+                                              child: Text(
+                                                '홍길동',
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyText1
+                                                        .override(
+                                                          fontFamily:
+                                                              'NotoSansKR',
+                                                          color: Colors.white,
+                                                          fontSize: 16,
+                                                          useGoogleFonts: false,
+                                                        ),
+                                              ),
+                                            ),
+                                            Text(
+                                              '탐정',
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyText1
+                                                      .override(
+                                                        fontFamily:
+                                                            'NotoSansKR',
+                                                        color: Colors.white,
+                                                        fontSize: 16,
+                                                        useGoogleFonts: false,
+                                                      ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                      Row(
+                                        mainAxisSize: MainAxisSize.max,
+                                        children: [
+                                          Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    0, 0, 3, 0),
+                                            child: Text(
+                                              '전문답변수',
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyText1
+                                                      .override(
+                                                        fontFamily:
+                                                            'NotoSansKR',
+                                                        color: Colors.white,
+                                                        fontSize: 12,
+                                                        fontWeight:
+                                                            FontWeight.normal,
+                                                        useGoogleFonts: false,
+                                                      ),
+                                            ),
+                                          ),
+                                          Text(
+                                            '5',
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyText1
+                                                .override(
+                                                  fontFamily: 'NotoSansKR',
+                                                  color: Colors.white,
+                                                  fontSize: 12,
+                                                  fontWeight: FontWeight.bold,
+                                                  useGoogleFonts: false,
+                                                ),
+                                          ),
+                                          Text(
+                                            'ㅣ',
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyText1
+                                                .override(
+                                                  fontFamily: 'NotoSansKR',
+                                                  color: Colors.white,
+                                                  fontSize: 12,
+                                                  useGoogleFonts: false,
+                                                ),
+                                          ),
+                                          Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    0, 0, 3, 0),
+                                            child: Text(
+                                              '받은감사수',
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyText1
+                                                      .override(
+                                                        fontFamily:
+                                                            'NotoSansKR',
+                                                        color: Colors.white,
+                                                        fontSize: 12,
+                                                        fontWeight:
+                                                            FontWeight.normal,
+                                                        useGoogleFonts: false,
+                                                      ),
+                                            ),
+                                          ),
+                                          Text(
+                                            '100',
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyText1
+                                                .override(
+                                                  fontFamily: 'NotoSansKR',
+                                                  color: Colors.white,
+                                                  fontSize: 12,
+                                                  fontWeight: FontWeight.bold,
+                                                  useGoogleFonts: false,
+                                                ),
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Padding(
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  15, 10, 15, 15),
+                              child: Text(
+                                '텍스트',
+                                maxLines: 7,
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyText1
+                                    .override(
+                                      fontFamily: 'NotoSansKR',
+                                      color: FlutterFlowTheme.of(context)
+                                          .secondaryColor,
+                                      fontWeight: FontWeight.w500,
+                                      useGoogleFonts: false,
+                                    ),
+                              ),
+                            ),
+                            Padding(
+                              padding:
+                                  EdgeInsetsDirectional.fromSTEB(10, 0, 15, 10),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  Text(
+                                    '2022.12.11',
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyText1
+                                        .override(
+                                          fontFamily: 'NotoSansKR',
+                                          color: Color(0xFFA4ABB5),
                                           fontSize: 12,
                                           fontWeight: FontWeight.w500,
                                           useGoogleFonts: false,
@@ -1205,7 +1498,7 @@ class _Case01DetailWidgetState extends State<Case01DetailWidget> {
                           Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(0, 0, 3, 0),
                             child: Text(
-                              '학교폭력',
+                              '나의 상담 답변',
                               style: FlutterFlowTheme.of(context)
                                   .bodyText1
                                   .override(
@@ -1219,7 +1512,7 @@ class _Case01DetailWidgetState extends State<Case01DetailWidget> {
                           Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(0, 0, 5, 0),
                             child: Text(
-                              '사례 더보기',
+                              '더보기',
                               style: FlutterFlowTheme.of(context).bodyText1,
                             ),
                           ),
@@ -1233,7 +1526,7 @@ class _Case01DetailWidgetState extends State<Case01DetailWidget> {
                     ),
                     Container(
                       width: double.infinity,
-                      height: 270,
+                      height: 195,
                       decoration: BoxDecoration(
                         color: FlutterFlowTheme.of(context).secondaryBackground,
                         borderRadius: BorderRadius.circular(10),
@@ -1242,79 +1535,6 @@ class _Case01DetailWidgetState extends State<Case01DetailWidget> {
                         mainAxisSize: MainAxisSize.max,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Padding(
-                            padding:
-                                EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.max,
-                              children: [
-                                Container(
-                                  width: 179,
-                                  height: 60,
-                                  decoration: BoxDecoration(
-                                    color: Color(0xFFFDFDFD),
-                                    borderRadius: BorderRadius.only(
-                                      bottomLeft: Radius.circular(0),
-                                      bottomRight: Radius.circular(0),
-                                      topLeft: Radius.circular(10),
-                                      topRight: Radius.circular(0),
-                                    ),
-                                  ),
-                                  child: Column(
-                                    mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Text(
-                                        '조회순',
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyText1
-                                            .override(
-                                              fontFamily: 'NotoSansKR',
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primaryColor,
-                                              fontSize: 18,
-                                              useGoogleFonts: false,
-                                            ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Container(
-                                  width: 181,
-                                  height: 60,
-                                  decoration: BoxDecoration(
-                                    color: Color(0xFFBDC5D2),
-                                    borderRadius: BorderRadius.only(
-                                      bottomLeft: Radius.circular(0),
-                                      bottomRight: Radius.circular(0),
-                                      topLeft: Radius.circular(0),
-                                      topRight: Radius.circular(10),
-                                    ),
-                                  ),
-                                  child: Column(
-                                    mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Text(
-                                        '최신순',
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyText1
-                                            .override(
-                                              fontFamily: 'NotoSansKR',
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .secondaryText,
-                                              fontSize: 18,
-                                              useGoogleFonts: false,
-                                            ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
                           Padding(
                             padding:
                                 EdgeInsetsDirectional.fromSTEB(15, 10, 15, 10),

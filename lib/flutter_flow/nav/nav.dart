@@ -128,6 +128,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => UserRequestAdd04Widget(),
             ),
             FFRoute(
+              name: 'user_requestAdd05',
+              path: 'userRequestAdd05',
+              builder: (context, params) => UserRequestAdd05Widget(),
+            ),
+            FFRoute(
               name: 'Case01',
               path: 'case01',
               builder: (context, params) => Case01Widget(),
@@ -143,19 +148,59 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => Case01DetailWidget(),
             ),
             FFRoute(
-              name: 'Case02_detail',
-              path: 'case02Detail',
-              builder: (context, params) => Case02DetailWidget(),
-            ),
-            FFRoute(
               name: 'QnA',
               path: 'qnA',
               builder: (context, params) => QnAWidget(),
             ),
             FFRoute(
+              name: 'Case02_detail',
+              path: 'case02Detail',
+              builder: (context, params) => Case02DetailWidget(),
+            ),
+            FFRoute(
               name: 'notice',
               path: 'notice',
               builder: (context, params) => NoticeWidget(),
+            ),
+            FFRoute(
+              name: 'profileDet',
+              path: 'profileDet',
+              builder: (context, params) => ProfileDetWidget(),
+            ),
+            FFRoute(
+              name: 'profileUser',
+              path: 'profileUser',
+              builder: (context, params) => ProfileUserWidget(),
+            ),
+            FFRoute(
+              name: 'userPostList',
+              path: 'userPostList',
+              builder: (context, params) => UserPostListWidget(),
+            ),
+            FFRoute(
+              name: 'userpostListDetail',
+              path: 'userpostListDetail',
+              builder: (context, params) => UserpostListDetailWidget(),
+            ),
+            FFRoute(
+              name: 'detPostList',
+              path: 'detPostList',
+              builder: (context, params) => DetPostListWidget(),
+            ),
+            FFRoute(
+              name: 'detpostListDetail',
+              path: 'detpostListDetail',
+              builder: (context, params) => DetpostListDetailWidget(),
+            ),
+            FFRoute(
+              name: 'detRequestList',
+              path: 'detRequestList',
+              builder: (context, params) => DetRequestListWidget(),
+            ),
+            FFRoute(
+              name: 'detRequestListDetail',
+              path: 'detRequestListDetail',
+              builder: (context, params) => DetRequestListDetailWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ).toRoute(appStateNotifier),
